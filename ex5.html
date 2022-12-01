@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> 
+</head>
+<body>
+
+<!-- titre -->
+
+    <h1 class="lead text-center py-2">Calculatrice</h1>
+
+<!-- Container principal -->
+
+    <div class="pt-3 mx-auto container d-flex justify-content-center bg-primary rounded">
+        
+<!-- container pour les 3 éléments de la calculatrice -->
+
+        <div class="pt-3 mx-auto container-fluid ">
+
+<!-- écran d'affichage des résultat -->
+
+            <div id="output" class="p-3 mx-auto mb-2 bg-dark text-white text-end col-10" style="height: 3rem ;"></div>
+
+<!-- container pour les 2 élément opérateur numérique et arithmétique -->
+
+            <div class=" p-3 mx-auto d-flex flex-row justify-content-between px-0 text-white col-10">
+    
+                <div class="p-3 mb-5 text-dark px-0 col-7">
+                    <div class="d-flex flex-row text-center">
+                        <button id="r1-1" value="7" onclick="forDisplay('7');" type="button" class="col-4 btn btn-secondary border border-white rounded-0">7</button>
+                        <button id="r1-2" value="8" onclick="forDisplay('8');" type="button" class="col-4 btn btn-secondary border border-white rounded-0">8</button>
+                        <button id="r1-3" value="9" onclick="forDisplay('9');" type="button" class="col-4 btn btn-secondary border border-white rounded-0">9</button>
+                    </div>
+                    <div class="d-flex flex-row text-center">
+                        <button id="r2-1" value="4" onclick="forDisplay('4');" type="button" class="col-4 btn btn-secondary border border-white rounded-0">4</button>
+                        <button id="r2-2" value="5" onclick="forDisplay('5');" type="button" class="col-4 btn btn-secondary border border-white rounded-0">5</button>
+                        <button id="r2-3" value="6" onclick="forDisplay('6');" type="button" class="col-4 btn btn-secondary border border-white rounded-0">6</button>
+                    </div>
+                    <div class="d-flex flex-row text-center">
+                        <button id="r3-1" value="1" onclick="forDisplay('1');" type="button" class="col-4 btn btn-secondary border border-white rounded-0">1</button>
+                        <button id="r3-2" value="2" onclick="forDisplay('2');" type="button" class="col-4 btn btn-secondary border border-white rounded-0">2</button>
+                        <button id="r3-3" value="3" onclick="forDisplay('3');" type="button" class="col-4 btn btn-secondary border border-white rounded-0">3</button>
+                    </div>
+                    <div class="d-flex flex-row text-center">
+                        <button id="r4-1" value="0" onclick="forDisplay('0');" type="button" class="col-4 btn btn-secondary border border-white rounded-0">0</button>
+                        <button id="r4-2" value="." onclick="forDisplay('.');" type="button" class="col-4 btn btn-secondary border border-white rounded-0">,</button>
+                        <button id="r4-3" type="button" onclick="forclear();" class="col-4 btn btn-secondary border border-white rounded-0">C</button>
+
+                    </div>
+                </div>
+    
+                <div class="p-3 text-center text-dark d-flex flex-column px-0 col-3">
+                    <button id="r1-4" value="/" onclick="forDisplay('/');" type="button" class="btn btn-warning border border-white rounded-0">/</button>
+                    <button id="r2-4" value="x" onclick="forDisplay('*');" type="button" class="btn btn-warning border border-white rounded-0">X</button>
+                    <button id="r3-4" value="-" onclick="forDisplay('-');" type="button" class="btn btn-warning border border-white rounded-0">-</button>
+                    <button id="r4-4" value="+" onclick="forDisplay('+');" type="button" class="btn btn-warning border border-white rounded-0">+</button>
+                    <button id="r5" value="=" onclick="solve();" type="button" class="btn btn-warning border border-white rounded-0">=</button>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+
+<script src="ex5.js" async ></script>
+
+</body>
+</html>
